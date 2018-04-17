@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hazelcast xsi:schemaLocation=
+                   "http://www.hazelcast.com/schema/config hazelcast-config-3.7.xsd"
+           xmlns="http://www.hazelcast.com/schema/config"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <network>
+        <port auto-increment="true" port-count="20">5701</port>
+        <join>
+            <multicast enabled="false">
+            </multicast>
+            <tcp-ip enabled="true">
+                <member>ec2-13-125-151-132.ap-northeast-2.compute.amazonaws.com</member>
+                <member>ec2-13-125-97-134.ap-northeast-2.compute.amazonaws.com</member>
+            </tcp-ip>
+        </join>
+    </network>
+    <map name="customers">
+        <max-size>300</max-size>
+        <eviction-policy>LFU</eviction-policy>
+        <time-to-live-seconds>120</time-to-live-seconds>
+        <eviction-percentage>25</eviction-percentage>
+    </map>
+    <management-center enabled="true">
+        http://119.205.221.42:8082/mancenter
+    </management-center>
+</hazelcast>
