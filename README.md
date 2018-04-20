@@ -3,11 +3,8 @@
 
 
 
-
-
-
-# 문서작성중 ~~~~~~~~~~~~~~~~~~~ 
-
+정리한 글은 브런치에서...
+[https://brunch.co.kr/@springboot/56](https://brunch.co.kr/@springboot/56)
 
 
 
